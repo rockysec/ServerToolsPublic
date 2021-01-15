@@ -96,11 +96,9 @@ cd ~/tools/SecLists/Discovery/DNS/
 cat dns-Jhaddix.txt | head -n -14 > clean-jhaddix-dns.txt
 
 cd ~/tools/
-git clone https://github.com/projectdiscovery/nuclei.git
-cd nuclei/v2/cmd/nuclei/
-go build
+curl -L -O https://github.com/projectdiscovery/nuclei/releases/download/v2.2.0/nuclei_2.2.0_linux_amd64.tar.gz
+tar -xzvf nuclei_2.2.0_linux_amd64.tar.gz
 mv nuclei /usr/local/bin/
-git clone https://github.com/projectdiscovery/nuclei-templates.git ~/tools/nuclei/nuclei-templates
 
 cd ~/tools/
 curl -L -O https://github.com/lc/gau/releases/download/v1.1.0/gau_1.1.0_linux_amd64.tar.gz
