@@ -101,6 +101,10 @@ curl -L -O https://github.com/projectdiscovery/nuclei/releases/download/v2.2.0/n
 tar -xzvf nuclei_2.2.0_linux_amd64.tar.gz
 mv nuclei /usr/local/bin/
 
+curl -L -O https://github.com/projectdiscovery/httpx/releases/download/v1.0.3/httpx_1.0.3_linux_amd64.tar.gz
+tar -xzvf httpx_1.0.3_linux_amd64.tar.gz
+mv httpx /usr/local/bin/
+ 
 cd ~/tools/
 curl -L -O https://github.com/lc/gau/releases/download/v1.1.0/gau_1.1.0_linux_amd64.tar.gz
 tar xvf gau_1.1.0_linux_amd64.tar.gz
