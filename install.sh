@@ -23,6 +23,7 @@ apt-get install -y nmap
 snap install chromium
 
 pip install colored
+pip3 install colored
 pip install shodan
 
 go get github.com/michenriksen/aquatone
