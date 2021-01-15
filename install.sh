@@ -65,6 +65,9 @@ cd ~/tools/
 git clone https://github.com/guelfoweb/knock.git
 
 cd ~/tools/
+git clone https://github.com/rockysec/customscripts
+
+cd ~/tools/
 git clone https://github.com/blechschmidt/massdns.git
 cd ~/tools/massdns
 make
