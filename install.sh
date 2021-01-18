@@ -28,6 +28,7 @@ pip install colored
 pip3 install colored
 pip install shodan
 
+go get -u github.com/ffuf/ffuf
 go get github.com/michenriksen/aquatone
 go get -u github.com/tomnomnom/httprobe 
 go get -u github.com/tomnomnom/unfurl 
