@@ -15,7 +15,7 @@ sudo apt-get install -y git
 sudo apt-get install -y rename
 sudo apt-get install -y xargs
 sudo apt-get install -y chromium chromium-l10n
-sudo apt-get install -y golang
+#sudo apt-get install -y golang
 apt install -y awscli
 apt install -y snap
 apt install -y tmux
@@ -48,6 +48,10 @@ cd ~/tools/
 git clone https://github.com/nahamsec/JSParser.git
 cd JSParser*
 sudo python setup.py install
+
+git clone https://github.com/udhos/update-golang
+cd update-golang
+sudo ./update-golang.sh
 
 cd ~/tools/
 git clone https://github.com/aboul3la/Sublist3r.git
