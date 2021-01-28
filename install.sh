@@ -16,6 +16,7 @@ sudo apt-get install -y rename
 sudo apt-get install -y xargs
 sudo apt-get install -y chromium chromium-l10n
 #sudo apt-get install -y golang
+ apt install -y whatweb
 apt install -y awscli
 apt install -y snap
 apt install -y tmux
