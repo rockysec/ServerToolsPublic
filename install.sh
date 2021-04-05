@@ -15,8 +15,8 @@ sudo apt-get install -y git
 sudo apt-get install -y rename
 sudo apt-get install -y xargs
 sudo apt-get install -y chromium chromium-l10n
-#sudo apt-get install -y golang
- apt install -y whatweb
+sudo apt-get install -y golang
+apt install -y whatweb
 apt install -y awscli
 apt install -y snap
 apt install -y tmux
@@ -29,22 +29,10 @@ pip install colored
 pip3 install colored
 pip install shodan
 
-go get -u github.com/ffuf/ffuf
-go get github.com/michenriksen/aquatone
-go get -u github.com/tomnomnom/httprobe 
-go get -u github.com/tomnomnom/unfurl 
-go get github.com/tomnomnom/waybackurls
-go get -v github.com/projectdiscovery/naabu/cmd/naabu
-go get -v github.com/projectdiscovery/subfinder/cmd/subfinder
-go get -u -v github.com/projectdiscovery/shuffledns/cmd/shuffledns
-go get -u -v github.com/projectdiscovery/dnsprobe
-go get -u github.com/tomnomnom/anew
-go get -u github.com/tomnomnom/gf
-go get -u github.com/tomnomnom/qsreplace
-go get -u github.com/jaeles-project/gospider
-
 mkdir ~/tools
 cd ~/tools/
+
+https://github.com/projectdiscovery/nuclei-templates
 
 git clone https://github.com/nahamsec/JSParser.git
 cd JSParser*
@@ -83,9 +71,6 @@ cd ~/tools/
 git clone https://github.com/nahamsec/crtndstry.git
 
 cd ~/tools/
-git clone https://github.com/ffuf/ffuf
-
-cd ~/tools/
 git clone https://github.com/chenjj/CORScanner
 
 cd ~/tools/
@@ -102,11 +87,6 @@ git clone https://github.com/danielmiessler/SecLists.git
 cd ~/tools/SecLists/Discovery/DNS/
 cat dns-Jhaddix.txt | head -n -14 > clean-jhaddix-dns.txt
 
-cd ~/tools/
-curl -L -O https://github.com/projectdiscovery/nuclei/releases/download/v2.2.0/nuclei_2.2.0_linux_amd64.tar.gz
-tar -xzvf nuclei_2.2.0_linux_amd64.tar.gz
-mv nuclei /usr/local/bin/
-
 curl -L -O https://github.com/projectdiscovery/httpx/releases/download/v1.0.3/httpx_1.0.3_linux_amd64.tar.gz
 tar -xzvf httpx_1.0.3_linux_amd64.tar.gz
 mv httpx /usr/local/bin/
@@ -116,11 +96,35 @@ curl -L -O https://github.com/lc/gau/releases/download/v1.1.0/gau_1.1.0_linux_am
 tar xvf gau_1.1.0_linux_amd64.tar.gz
 mv gau /usr/bin/gau
 
-curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.10.2-amd64.deb
-sudo dpkg -i filebeat-7.10.2-amd64.deb
-#git clone https://rockysec:@github.com/rockysec/ServerConfigs
-#cd ServerConfigs
-#mv filebeat.yml /etc/filebeat/
+cd ~/tools/
+curl -L -O https://github.com/projectdiscovery/nuclei/releases/download/v2.2.0/nuclei_2.2.0_linux_amd64.tar.gz
+tar -xzvf nuclei_2.2.0_linux_amd64.tar.gz
+mv nuclei /usr/bin/
+git clone https://github.com/projectdiscovery/nuclei-templates
 
+cd ~/tools/
+curl -L -O https://github.com/ffuf/ffuf/releases/download/v1.2.1/ffuf_1.2.1_linux_amd64.tar.gz
+tar -xzvf ffuf_1.2.1_linux_amd64.tar.gz
+mv ffuf /usr/bin/
+
+curl -L -O https://github.com/projectdiscovery/subfinder/releases/download/v2.4.5/subfinder_2.4.5_linux_386.tar.gz
+tar -xzvf subfinder_2.4.5_linux_386.tar.gz
+mv subfinder /usr/local/bin/
+
+
+cd
+go get -u github.com/ffuf/ffuf
+go get github.com/michenriksen/aquatone
+go get -u github.com/tomnomnom/unfurl 
+go get -v github.com/projectdiscovery/naabu/cmd/naabu
+go get -u -v github.com/projectdiscovery/shuffledns/cmd/shuffledns
+go get -u -v github.com/projectdiscovery/dnsprobe
+go get -u github.com/tomnomnom/anew
+go get -u github.com/tomnomnom/gf
+go get -u github.com/tomnomnom/qsreplace
+go get -u github.com/jaeles-project/gospider
+go get -v github.com/projectdiscovery/httpx/cmd/httpx
+go get github.com/tomnomnom/waybackurls
+go get -u github.com/tomnomnom/anew
 cd ~/go/bin
 cp * /usr/bin/
